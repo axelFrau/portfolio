@@ -1,0 +1,28 @@
+{
+  "name": "portefolio",
+  "version": "1.0.0",
+  "description": "Axel FRAU's Portefolio for my dev career",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelFrau/portefolio.git"
+  },
+  "keywords": [
+    "Expressjs",
+    "nodejs"
+  ],
+  "author": "FRAU AXEL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axelFrau/portefolio/issues"
+  },
+  "homepage": "https://github.com/axelFrau/portefolio#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "install": "^0.13.0"
+  }
+}
