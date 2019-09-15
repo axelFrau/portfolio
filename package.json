@@ -4,6 +4,7 @@
   "description": "Axel FRAU's Portefolio for my dev career",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +22,13 @@
   },
   "homepage": "https://github.com/axelFrau/portefolio#readme",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "jquery": "^3.4.1",
+    "nodemon": "^1.19.2",
+    "peer": "^0.2.10",
+    "popper.js": "^1.15.0"
   }
 }

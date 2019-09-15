@@ -1,11 +1,36 @@
 <html lang="en">
 <head>
     <% include ../component/head %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+<% include ../component/header %>
 <body>
-    <div style="border: solid black 2px; height: 300px"></div>
+    <section class=" row bg-grey content justify-content-around" style="height: 500px;">
+        <div class="col-md-4 col-sm-12 text-center  cadre" style="position: relative">
+            <img class="img-profile" src="image/axel.jpg" alt="moi" style="">
+        </div>
+        <div class="col-7 profile-image cadre">
+            <div class="row text-center justify-content-center mt-5 cadre">
+                <h2>Bienvenue sur mon Portefolio</h2>
+            </div>
+            <div class="row text-center justify-content-center mt-5 cadre" style="margin: auto 20%">
+                <p>Vous trouverez sur mon site tout ce qu'il y a à savoir sur moi, mon parcour scolaire, mes expériences professionnelles, mes compétences et mon CV</p>
+            </div>
+            
+        </div>
+    </section>
 </body>
 <footer>
     <% include ../component/footer %>
 </footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<!-- <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script> -->
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 </html>
