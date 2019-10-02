@@ -70,6 +70,11 @@ padding-bottom: 100px;
 }
 #about-text{
     margin : 0 20% 10px !important;
+    background-color: #DDDDDD;
+    box-shadow: rgba(0, 0, 0, 30%) 10px 10px 5px 0px;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 10%
 }
 
 @media (max-width : 414px){
@@ -89,8 +94,8 @@ padding-bottom: 100px;
 */
 footer {
 box-sizing: border-box;
-height: 100px;
 background-color: #eee;
 border-top: 1px solid #e0e0e0;
-padding-top: 35px;
+padding: 30px 0px;
+
 }
