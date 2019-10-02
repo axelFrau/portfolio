@@ -1,36 +1,79 @@
 <html lang="en">
 <head>
-    <% include ../component/head %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MUI Landing Page with Extras</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.muicss.com/mui-0.9.43/extra/mui-colors.min.css">
+    <link rel="stylesheet" href="css/mui.css">
+    <script src="//cdn.muicss.com/mui-0.9.43/extra/mui-combined.min.js"></script>
 </head>
-<% include ../component/header %>
+
 <body>
-    <section class=" row bg-grey content justify-content-around" style="height: 500px;">
-        <div class="col-md-4 col-sm-12 text-center  cadre" style="position: relative">
-            <img class="img-profile" src="image/axel.jpg" alt="moi" style="">
-        </div>
-        <div class="col-7 profile-image cadre">
-            <div class="row text-center justify-content-center mt-5 cadre">
-                <h2>Bienvenue sur mon Portefolio</h2>
+    <header class="mui-appbar mui--z1">
+            <% include header.ejs %>
+    </header>
+    <div id="content-wrapper" class="mui--text-center">
+            <div class="mui--appbar-height"></div>
+            <br><br>
+            <div class="mui--text-display3 row wow fadeIn">Mon Portfolio</div>
+            <br><br><br>
+        <img class="img-profile wow fadeIn" src="image/axel.jpg" style="">
+            <br><br>
+            <div  class="mui--text-subhead row wow fadeIn">
+                <p id="about-text" style="background-color: #DDDDDD;box-shadow: rgba(0, 0, 0, 30%) 10px 10px 5px 0px;padding: 20px;border-radius: 30px;margin-bottom: 10%">Je suis très curieux de nature, j’aime chercher et apprendre de
+                        nouvelles choses dans plusieurs domaines différents tels que
+                        l’histoire, la biologie, la physique et bien évidemment je suis très
+                        porté sur l’informatique en général et les nouvelles technologies plus
+                        particulièrement ! J’ai un esprit logique, j’apprends rapidement ce que
+                        j’étudie et surtout j’aime creuser les sujets qui m’intéressent afin de
+                        savoir le plus de choses possibles !</p>
             </div>
-            <div class="row text-center justify-content-center mt-5 cadre" style="margin: auto 20%">
-                <p>Vous trouverez sur mon site tout ce qu'il y a à savoir sur moi, mon parcour scolaire, mes expériences professionnelles, mes compétences et mon CV</p>
-            </div>
-            
+    </div><br><br>
+    <footer>
+        <div class="mui-container mui--text-center" style="background-color: #eee;padding: 0px 50px 20px 50px">
+                <div class="mui-row">
+                    <div class="mui-col-md-3">
+                        <div class="mui-col-md-3" style="margin-top: 10px">
+                            <i class="fa fa-phone fa-2x mui--text-display3 mui--color-black row" aria-hidden="true"></i>
+                        </div>
+                        <div class="mui-col-md-3">
+                            06.71.14.83.69<br>04.95.20.34.22
+                        </div>
+                        
+                    </div>
+                    <div class="mui-col-md-3">
+                        <div class="mui-col-md-3" style="margin-top: 10px">
+                            <i class="fa fa-envelope fa-2x mui--text-display3 mui--color-black row" aria-hidden="true"></i>
+                        </div>
+                        <div class="mui-col-md-3" style="margin-top: 5%">
+                            <a href="mailto:axel.frau.tr@gmail.com">axel.frau.tr@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="mui-col-md-6">
+                        <div class="mui-col-md-12" style="margin-top: 10px">
+                            <div class="mui-col-md-4" style="margin-right: 2%">
+                                <i class="fa fa-facebook fa-1x mui--text-display3 mui--color-black" aria-hidden="true"></i>
+                                @axelFrau
+                            </div>
+                            <div class="mui-col-md-4" style="margin-right: 2%">
+                                <i class="fa fa-twitter fa-1x mui--text-display3 mui--color-black" aria-hidden="true" style="margin-bottom: 1%"></i>
+                                Axel Frau
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-    </section>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
-<footer>
-    <% include ../component/footer %>
-</footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-<!-- <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script> -->
-<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
 </html>
