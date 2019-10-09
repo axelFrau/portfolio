@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MUI Landing Page with Extras</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.muicss.com/mui-0.9.43/extra/mui-colors.min.css">
+    <link rel="stylesheet" href="css/mui.css">
+    <link rel="stylesheet" href="css/parcours.css">
+    <link rel="stylesheet" href="css/mat-list.css">
+    <script src="//cdn.muicss.com/mui-0.9.43/extra/mui-combined.min.js"></script>
+</head>
+
+<body>
+    <header class="mui-appbar mui--z1">
+            <% include header.ejs %>
+    </header>
+    <div id="content-wrapper" class="mui--text-center">
+        <div class="mui--appbar-height"></div>
+        <br><br>
+        <div class="mui--text-display2 row wow fadeIn">Mon Parcours &  Mes Compétences</div><br><br><br><br>
+        
+        <div class="mui-row parcours-row" >
+            <div class="mui-row " ><h3 class="mui--text-display1">Parcours</h3></div>
+            <div class="mui-row " ><div class="mui-col-md-4">
+                    <img class="img-par-com wow fadeIn" src="image/img_parcours/clip-parcours.png">
+                </div>
+                <div class="mui-col-md-4">
+                    <div class="wrapper">
+                        <ul class="mat_list card scrollable">
+                            <li><p>test</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mui-col-md-4">
+                    <div class="wrapper">
+                        <ul class="mat_list card scrollable">
+                            <li><p>test</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mui-row parcours-row" >
+            <div class="mui-row" ><h3 class="mui--text-display1">Compétences</h3></div>
+            <div class="mui-row" >
+                <div class="mui-col-md-4 ">
+                    <img class="img-par-com wow fadeIn" src="image/img_parcours/clip-competences.png">
+                </div>
+                <div class="mui-col-md-4">
+                    <div class="wrapper">
+                        <ul class="mat_list card scrollable">
+                            <li><p>test</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mui-col-md-4">
+                    <div class="wrapper">
+                        <ul class="mat_list card scrollable">
+                            <li><p>test</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                            <li><p>retest</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer style="margin-top: 4%">
+        <% include footer.ejs %>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

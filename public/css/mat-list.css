@@ -1,0 +1,63 @@
+.wrapper{
+    width:80%;
+    margin: 40px 2rem;
+    font-size: 1rem;
+    margin : 17% 0px;
+    float: left;
+}
+p,a, h1{
+    padding:0.5rem;
+    display:block;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.card{
+    border-radius: 0.2rem;
+    background-color: #fafafa;
+    box-shadow: rgba(0, 0, 0, 30%) 10px 10px 5px 0px;
+    overflow:auto;
+}
+
+.mat_list{
+    list-style-type: none;
+    display:block;
+    max-height: 100%;
+}
+.mat_list>li{
+    margin-top:-1px;
+    width:100%;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+.mat_list>li::before{
+    content: "";
+    width: 75%;
+    display:block;
+    margin:auto;
+    border-top:1px solid rgba(0,0,0,0.3);
+}
+.mat_list>li.hide{
+    max-height:0px;
+}
+.mat_list_title{
+    background-color: #955;
+    color: rgba(255,255,255,0.75);
+}
+.mat_list_title[style*="background"]{
+    height: 0rem;
+    position:relative;
+    background-size: cover;
+    background-position: center center;
+}
+.mat_list_title>h1{
+    font-size: 2rem;
+    font-weight: 100;
+}
+.mat_list_title[style*="background"]>h1{
+    position:absolute;
+    bottom:0px;
+}
