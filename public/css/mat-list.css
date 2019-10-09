@@ -2,7 +2,6 @@
     width:80%;
     margin: 40px 2rem;
     font-size: 1rem;
-    margin : 17% 0px;
     float: left;
 }
 p,a, h1{
@@ -60,4 +59,8 @@ p,a, h1{
 .mat_list_title[style*="background"]>h1{
     position:absolute;
     bottom:0px;
+}
+
+li p{
+    font-size: 0.7rem
 }
