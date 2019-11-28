@@ -17,18 +17,18 @@ app.set('view engine', 'ejs')
 app.get('/', function(req, res) {
     res.render('pages/index');
 });
-app.get('/parcours', function(req, res) {
-    res.render('pages/parcours');
-});
-app.get('/experience', function(req, res) {
-    res.render('pages/experience');
-});
-app.get('/contact', function(req, res) {
-    res.render('pages/contact');
-});
-app.get('/cv', function(req, res) {
-    res.render('pages/cv');
-});
+// app.get('/parcours', function(req, res) {
+//     res.render('pages/parcours');
+// });
+// app.get('/experience', function(req, res) {
+//     res.render('pages/experience');
+// });
+// app.get('/contact', function(req, res) {
+//     res.render('pages/contact');
+// });
+// app.get('/cv', function(req, res) {
+//     res.render('pages/cv');
+// });
 
 // app.get('/parcour', function(req,res) {
 //     res.render('pages/parcour')
