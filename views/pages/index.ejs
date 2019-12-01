@@ -1,47 +1,941 @@
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MUI Landing Page with Extras</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.muicss.com/mui-0.9.43/extra/mui-colors.min.css">
-    <link rel="stylesheet" href="css/mui.css">
-    <script src="//cdn.muicss.com/mui-0.9.43/extra/mui-combined.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <!-- Page Title Here -->
+    <title>Mon Portfolio</title>
+
+    <!-- Meta -->
+    <!-- Page Description Here -->
+    <meta name="description"
+          content="Nice and creative portfolio template. Fully responsive with cool animations">
+    <meta name="keywords"
+          content="agency, bootstrap 4, creative, flexbox, jquery, minimalist, motion design, onepage, photography, portfolio, product, responsive, studio, video">
+
+    <!-- Disable screen scaling-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+
+    <!-- Web fonts and Web Icons -->
+    <link rel="stylesheet" href="fonts/opensans/stylesheet.css">
+    <link rel="stylesheet" href="fonts/ionicons/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/font-awesome.min.css">
+
+    <!-- Vendor CSS style -->
+    <link rel="stylesheet" href="css/pageloader.css">
+
+    <!-- Uncomment below to load individualy vendor CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/vendor/swiper.min.css">
+    <link rel="stylesheet" href="js/vendor/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="js/vegas/vegas.min.css">
+
+    <!-- Main CSS files -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-    <header class="mui-appbar mui--z1">
-            <% include header.ejs %>
-    </header>
-    <div id="content-wrapper" class="mui--text-center">
-            <div class="mui--appbar-height"></div>
-            <br><br>
-            <div class="mui--text-display3 row wow fadeIn">Mon Portfolio</div>
-            <br><br><br>
-        <img class="img-profile wow fadeIn" src="image/axel.jpg">
-            <br><br>
-            <div  class="mui--text-subhead row wow fadeIn">
-                <p id="about-text">Je suis très curieux de nature, j’aime chercher et apprendre de
-                        nouvelles choses dans plusieurs domaines différents tels que
-                        l’histoire, la biologie, la physique et bien évidemment je suis très
-                        porté sur l’informatique en général et les nouvelles technologies plus
-                        particulièrement ! J’ai un esprit logique, j’apprends rapidement ce que
-                        j’étudie et surtout j’aime creuser les sujets qui m’intéressent afin de
-                        savoir le plus de choses possibles !</p>
+<body id="menu" class="body-page">
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Page Loader : just comment these lines to remove it -->
+<div class="page-loader" id="page-loader">
+    <div>
+        <div class="icon ion-spin"></div>
+    </div>
+</div>
+
+<!-- BEGIN OF site header Menu -->
+<header class="page-header navbar page-header-alpha scrolled-white menu-right topmenu-right">
+
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+        <!-- Available class : menu-icon-dot / menu-icon-thick /menu-icon-random -->
+        <span class="menu-icon menu-icon-random">
+        <span class="bars">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+        </span>
+      </span>
+    </button>
+    <!-- End of menu icon toggler -->
+
+    <!-- Begin of logo/brand -->
+    <a class="navbar-brand" href="#home">
+      <span class="logo">
+        <img class="light-logo" src="img/icone-portefolio.png" alt="Logo">
+      </span>
+    </a>
+    <!-- End of logo/brand -->
+
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+        <!-- Begin of hamburger mainmenu menu -->
+        <nav class="navbar-mainmenu">
+            <ul class="navbar-nav mr-auto mr-auto-my">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.ejs#home">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./gallery.ejs">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./item.ejs">Item</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End of hamburger mainmenu menu -->
+
+        <!-- Begin of sidebar nav menu params class: text-only / icon-only-->
+        <nav class="navbar-sidebar ">
+            <ul class="navbar-nav" id="qmenu">
+                <li class="nav-item" data-menuanchor="home">
+                    <a href="#home">
+                        <i class="icon ion-ios-home"></i>
+                        <span class="txt">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-menuanchor="about">
+                    <a href="#about">
+                        <i class="icon ion-star"></i>
+                        <span class="txt">About</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-menuanchor="services">
+                    <a href="#services">
+                        <i class="icon ion-clipboard"></i>
+                        <span class="txt">Services</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-menuanchor="team">
+                    <a href="#team">
+                        <i class="icon ion-ios-people"></i>
+                        <span class="txt">Team</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-menuanchor="projects">
+                    <a href="#projects">
+                        <i class="icon ion-ios-briefcase"></i>
+                        <span class="txt">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-menuanchor="products">
+                    <a href="#products">
+                        <i class="icon ion-cube"></i>
+                        <span class="txt">Products</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-menuanchor="register">
+                    <a href="#register">
+                        <i class="icon ion-compose"></i>
+                        <span class="txt">Subscribe</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-menuanchor="contact">
+                    <a href="#contact">
+                        <i class="icon ion-email"></i>
+                        <span class="txt">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End of sidebar nav menu -->
+    </div>
+    <!-- end of menu wrapper -->
+
+</header>
+<!-- END OF site header Menu-->
+
+<!-- BEGIN OF page cover -->
+<div class="page-cover">
+    <!-- Cover Background -->
+    <div class="cover-bg bg-img" data-image-src="https://via.placeholder.com/1920x1024"></div>
+
+    <!-- Transluscent mask as filter -->
+    <div class="cover-bg-mask bg-color" data-bgcolor="rgba(2, 3, 10, 0.7)"></div>
+</div>
+<!--END OF page cover -->
+
+<!-- BEGIN OF page main content -->
+<main class="page-main page-fullpage main-anim" id="mainpage">
+
+    <!-- Begin of home section -->
+    <div class="section section-home fullscreen-md fp-auto-height-responsive main-home"
+         data-section="home">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper center-vh dir-col anim">
+            <!-- content -->
+            <div class="section-content reduced text-center">
+                <div class="row">
+                    <!-- title -->
+                    <div class="section-title text-center">
+                        <h5 class="title-bg">Home</h5>
+                    </div>
+                    <div class="col-12 col-md-12 text-center">
+
+                        <!-- title and description -->
+                        <div class="title-desc">
+                            <h2 class="display-4 display-title home-title anim-1">Portolex</h2>
+                            <h4 class="anim-2 opacity-75">We are creative experts, build your company with us. Today’s progress was
+                                yesterday’s plan.</h4>
+                        </div>
+
+                        <!-- Action button -->
+                        <div class="btns-action anim-3">
+                            <a class="btn btn-outline-white" href="#about">
+                                <span class="text">About</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-    </div><br><br>
-    <footer style="margin-top: 4%">
-        <% include footer.ejs %>
-    </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+
+
+            <!-- Arrows scroll down/up -->
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">About Us</span>
+                </a>
+            </footer>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- End of home section -->
+
+    <!-- Begin of description section -->
+    <div class="section section-description fp-auto-height-responsive about-section" data-section="about">
+        <!-- Begin of section wrapper -->
+
+        <div class="section-wrapper center-vh dir-col anim">
+            <!-- title -->
+            <div class="section-title text-center">
+                <h5 class="title-bg">About</h5>
+                <h2 class="display-4 display-title anim-2 mb-32">About Us</h2>
+            </div>
+
+            <!-- content -->
+            <div class="section-content reduced center-vh dir-col">
+                <!-- about img -->
+                <div class="col-12 col-sm-12 center-vh">
+                    <div class="section-content anim translateUp">
+                        <div class="images text-center">
+                            <div class="img-frame-legend-alpha">
+                                <div>
+                                    <img class="img shadow" src="https://via.placeholder.com/1024x650" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8 col-sm-8 about-description shadow">
+                    <div class="section-content anim">
+                        <!-- description -->
+                        <h4 class="text-center">Our Mission</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet
+                            malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum
+                            ipsum tincidunt non. Quisque convallis pharetra tempor. Donec id
+                            pretium leo. Pellentesque luctus massa non elit viverra pellentesque.
+                            Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui.
+                            Fusce in urna sem.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of content -->
+
+            <!-- Arrows scroll down/up -->
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Services</span>
+                </a>
+            </footer>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+
+    <!-- Begin of list feature section -->
+    <div class="section section-list-feature fp-auto-height-responsive " data-section="services">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper twoside center-vh dir-col anim">
+            <!-- title -->
+            <div class="section-title text-center">
+                <h2 class="title-bg">Services</h2>
+                <h2 class="display-4 display-title anim-2 mb-32">Services</h2>
+            </div>
+
+            <!-- text or illustration order are manipulated via Bootstrap order-md-1, order-md-2 class -->
+            <!-- begin of item -->
+            <div class="item row justify-content-between fade-1">
+                <!-- begin of column content -->
+                <div class="col-12 col-md-6 col-lg-6">
+                    <!-- content -->
+                    <div class="section-content reduced">
+                        <!-- a media object -->
+                        <div class="media">
+                            <div class="media-body text-center">
+                                <i class="icon icon ion-code-working m-auto"></i>
+                                <h4>Development</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada
+                                    feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque
+                                    convallis pharetra tempor.</p>
+                            </div>
+                        </div>
+                        <!-- a media object -->
+                        <div class="media">
+                            <div class="media-body text-center">
+                                <i class="icon ion-ios-pie-outline m-auto"></i>
+                                <h4>Marketing</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada
+                                    feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque
+                                    convallis pharetra tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of column content -->
+
+                <!-- begin of column content -->
+                <div class="col-12 col-md-6 col-lg-6">
+                    <!-- content -->
+                    <div class="section-content reduced">
+                        <!-- a media object -->
+                        <div class="media">
+                            <div class="media-body text-center">
+                                <i class="icon ion-paintbrush m-auto"></i>
+                                <h4>Design</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada
+                                    feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque
+                                    convallis pharetra tempor.</p>
+                            </div>
+                        </div>
+                        <!-- a media object -->
+                        <div class="media">
+                            <div class="media-body text-center">
+                                <i class="icon ion-android-globe m-auto"></i>
+                                <h4>SEO</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada
+                                    feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque
+                                    convallis pharetra tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of column content -->
+            </div>
+            <!-- end of item -->
+
+            <!-- Arrows scroll down/up -->
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Team</span>
+                </a>
+            </footer>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- End of list feature section -->
+
+    <!-- Begin of description section -->
+    <div class="section section-description fp-auto-height-responsive " data-section="team">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper center-vh dir-col anim">
+            <!-- title -->
+            <div class="section-title text-center">
+                <h5 class="title-bg">Team</h5>
+                <h2 class="display-4 display-title anim-2 mb-32">Team</h2>
+            </div>
+
+            <!-- content -->
+            <div class="section-content anim text-center">
+                <!-- text or illustration order are manipulated via Bootstrap order-md-1, order-md-2 class -->
+                <!-- begin of item -->
+                <div class="item row justify-content-between">
+                    <!-- img-frame-normal demo -->
+                    <div class="col-12 col-sm-6 col-md-4 center-vh">
+                        <div class="section-content anim translateUp">
+                            <div class="images text-center">
+                                <div class="img-avatar-alpha">
+                                    <div class="img-1 shadow">
+                                        <a href="item.html">
+                                            <img class="img" src="https://via.placeholder.com/350x520" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="legend text-center pos-abs">
+                                        <div class="pull-left text-left">
+                                            <h5>David Miler</h5>
+                                            <p class="small">CEO / Founder</p>
+                                        </div>
+
+                                        <div class="icons pull-right text-right">
+                                            <a class="icon-btn" href="#">
+                                                <i class="icon ion-social-linkedin"></i>
+                                            </a>
+                                            <a class="icon-btn" href="#">
+                                                <i class="icon ion-social-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- img-frame-normal demo -->
+                    <div class="col-12 col-sm-6 col-md-4 center-vh">
+                        <div class="section-content anim">
+                            <div class="images text-center">
+                                <div class="img-avatar-alpha">
+                                    <div class="img-1 shadow">
+                                        <a href="item.html">
+                                            <img class="img" src="https://via.placeholder.com/350x520" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="legend text-center pos-abs">
+                                        <div class="pull-left text-left">
+                                            <h5>Sara Eniston</h5>
+                                            <p class="small">Designer</p>
+                                        </div>
+
+                                        <div class="icons pull-right text-right">
+                                            <a class="icon-btn" href="#">
+                                                <i class="icon ion-social-dribbble-outline"></i>
+                                            </a>
+                                            <a class="icon-btn" href="#">
+                                                <i class="icon ion-social-instagram-outline"></i>
+                                            </a>
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- img-frame-normal demo -->
+                    <div class="col-12 col-sm-6 col-md-4 center-vh">
+                        <div class="section-content anim translateDown">
+                            <div class="images text-center">
+                                <div class="img-avatar-alpha">
+                                    <div class="img-1 shadow">
+                                        <a href="item.html">
+                                            <img class="img" src="https://via.placeholder.com/350x520" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="legend text-center pos-abs">
+                                        <div class="pull-left text-left">
+                                            <h5>James Duncan</h5>
+                                            <p class="small">Web Developer</p>
+                                        </div>
+
+                                        <div class="icons pull-right text-right">
+                                            <a class="icon-btn" href="#">
+                                                <i class="icon ion-social-linkedin"></i>
+                                            </a>
+                                            <a class="icon-btn" href="#">
+                                                <i class="icon fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end of item -->
+            </div>
+
+            <!-- Arrows scroll down/up -->
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Projects</span>
+                </a>
+            </footer>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+
+    <!-- Begin of slider section -->
+    <div class="section section-twoside fp-auto-height-responsive " data-section="projects">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper twoside">
+            <!-- title -->
+            <div class="section-title text-center">
+                <h5 class="title-bg ">Projects</h5>
+                <h2 class="display-4 display-title mb-32">Projects</h2>
+            </div>
+
+
+            <!-- begin of carousel-swiper-beta -->
+            <div class="slider-wrapper carousel-swiper-beta carousel-smalls carousel-swiper-beta-demo">
+                <!-- slider -->
+                <div class="slider-container swiper-container">
+                    <ul class="item-list swiper-wrapper">
+                        <!-- item -->
+                        <li class="slide-item swiper-slide">
+                            <div class="item-wrapper">
+                                <div class="illustr">
+                                    <img src="https://via.placeholder.com/1200x625" alt="Image" class="img">
+                                </div>
+                                <a class="legend" href="item.html#project_url">
+                                    <h2 class="display-4">Design</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </a>
+                            </div>
+                        </li>
+                        <!-- item -->
+                        <li class="slide-item swiper-slide">
+                            <div class="item-wrapper">
+                                <div class="illustr">
+                                    <img src="https://via.placeholder.com/1200x625" alt="Image" class="img">
+                                </div>
+                                <a class="legend" href="item.html#project_url">
+                                    <h2 class="display-4">Development</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </a>
+                            </div>
+                        </li>
+                        <!-- item -->
+                        <li class="slide-item swiper-slide">
+                            <div class="item-wrapper">
+                                <div class="illustr">
+                                    <img src="https://via.placeholder.com/1200x625" alt="Image" class="img">
+                                </div>
+                                <a class="legend" href="item.html#project_url">
+                                    <h2 class="display-4">SEO</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </a>
+                            </div>
+                        </li>
+                        <!-- item -->
+                        <li class="slide-item swiper-slide">
+                            <div class="item-wrapper">
+                                <div class="illustr">
+                                    <img src="https://via.placeholder.com/1200x625" alt="Image" class="img">
+                                </div>
+                                <a class="legend" href="item.html#project_url">
+                                    <h2 class="display-4">Marketing</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- pagination -->
+                <div class="items-pagination bar"></div>
+
+                <!-- navigation -->
+                <div class="items-button bottom fit items-button-prev">
+                    <a class="btn btn-transp-arrow btn-primary icon-left" href="">
+                        <span class="fa fa-long-arrow-left"></span>
+                    </a>
+                </div>
+                <div class="items-button bottom fit items-button-next">
+                    <a class="btn btn-transp-arrow btn-primary" href="">
+                        <span class="fa fa-long-arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- end of carousel-swiper-beta -->
+
+            <!-- Arrows scroll down/up -->
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Products</span>
+                </a>
+            </footer>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- End of slider section -->
+
+    <!-- Begin of list two side 1 section -->
+    <div class="section section-twoside fp-auto-height-responsive " data-section="products">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper twoside center-vh dir-col">
+
+            <!-- title -->
+            <div class="section-title text-center ">
+                <h5 class="title-bg">Products</h5>
+                <h2 class="display-4 display-title mb-32">Products</h2>
+            </div>
+
+            <!-- text or illustration order are manipulated via Bootstrap order-md-1, order-md-2 class -->
+            <!-- begin of item -->
+            <div class="item row justify-content-between">
+                <!-- img-frame-normal demo -->
+                <div class="col-12 col-sm-6 col-md-4 center-vh">
+                    <div class="section-content anim translateUp">
+                        <div class="images text-center">
+                            <div class="img-frame-normal">
+                                <div class="img-1 shadow">
+                                    <div>
+                                        <img class="img" src="https://via.placeholder.com/380x475" alt="Image">
+                                    </div>
+                                    <div class="legend text-left pos-abs">
+                                        <h5 class="text-center">iWatch</h5>
+                                        <p class="small text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit</p>
+                                        <div class="btns-action text-center">
+                                            <a class="btn btn-outline-white" href="#">
+                                                <span class="text">Buy Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- img-frame-normal demo -->
+                <div class="col-12 col-sm-6 col-md-4 center-vh">
+                    <div class="section-content anim">
+                        <div class="images text-center">
+                            <div class="img-frame-normal">
+                                <div class="img-1 shadow">
+                                    <div>
+                                        <img class="img" src="https://via.placeholder.com/380x475" alt="Image">
+                                    </div>
+                                    <div class="legend text-left pos-abs">
+                                        <h5 class="text-center">MacBook</h5>
+                                        <p class="small text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit</p>
+                                        <div class="btns-action text-center">
+                                            <a class="btn btn-outline-white" href="#">
+                                                <span class="text">Buy Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- img-frame-normal demo -->
+                <div class="col-12 col-sm-6 col-md-4 center-vh">
+                    <div class="section-content anim translateDown">
+                        <div class="images text-center">
+                            <div class="img-frame-normal">
+                                <div class="img-1 shadow">
+                                    <div>
+                                        <img class="img" src="https://via.placeholder.com/380x475" alt="Image">
+                                    </div>
+                                    <div class="legend text-left pos-abs">
+                                        <h5 class="text-center">Iphone</h5>
+                                        <p class="small text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit</p>
+                                        <div class="btns-action text-center">
+                                            <a class="btn btn-outline-white" href="#">
+                                                <span class="text">Buy Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end of item -->
+
+            <!-- Arrows scroll down/up -->
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Subscribe</span>
+                </a>
+            </footer>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- End of list two side 1 section -->
+
+
+    <!-- Begin of register/login/signin section -->
+    <div class="section section-register fp-auto-height-responsive " data-section="register">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper center-vh dir-col">
+            <!-- title -->
+            <div class="section-title text-center">
+                <h5 class="title-bg">Subscribe</h5>
+            </div>
+
+            <!-- content -->
+            <div class="section-content reduced anim text-center">
+
+                <div class="row align-items-center justify-content-center">
+
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <!-- Registration form container-->
+                        <form class="send_email_form form-container form-container-transparent form-container-white"
+                              method="post" action="#">
+                            <div class="form-desc">
+                                <h2 class="display-4 display-title anim-2">Subscribe</h2>
+                                <p class="invite anim-3 opacity-75">Be the first to hear about the latest releases. Join the
+                                    Portolex email list.</p>
+                            </div>
+                            <div class="form-input  anim-4">
+                                <div class="form-group form-success-gone">
+                                    <label for="reg-email">Email</label>
+                                    <input id="reg-email" name="email" class="form-control-line form-control-white"
+                                           type="email"
+                                           required placeholder="your@email.address" data-validation-type="email"
+                                    />
+                                </div>
+                                <div class="form-group mb-0 text-center">
+                                    <div>
+                                        <p class="email-ok invisible form-text-feedback form-success-visible">Your email
+                                            has been registred, thank you.</p>
+                                    </div>
+                                    <button id="submit-email" class="btn btn-outline-white form-success-gone"
+                                            name="submit_email">Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrows scroll down/up -->
+            <footer class="section-footer scrolldown">
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Contact Us</span>
+                </a>
+            </footer>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- End of register/login/signin section -->
+
+    <!-- Begin of contact section -->
+    <div class="section section-contact fp-auto-height-responsive no-slide-arrows " data-section="contact">
+
+        <!-- begin of information slide -->
+        <div class="slide" id="information" data-anchor="information">
+            <!-- Begin of slide section wrapper -->
+            <div class="section-wrapper">
+                <!-- title -->
+                <div class="section-title text-center">
+                    <h5 class="title-bg">Contact</h5>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <!-- content -->
+                        <div class="section-content anim text-center">
+                            <!-- title and description -->
+                            <div class="title-desc">
+                                <div class="anim-2">
+                                    <h2 class="display-4 display-title">Contact</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet
+                                        malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum
+                                        ipsum tincidunt.</p>
+                                </div>
+                                <div class="address-container anim-3">
+
+                                    <div class="row">
+                                        <div class="col-12 col-md-12 col-lg-4">
+                                            <h4><i class="icon ion-android-call"></i></h4>
+                                            <p>01 234 567 89</p>
+                                        </div>
+
+                                        <div class="col-12 col-md-12 col-lg-4">
+                                            <h4><i class="icon ion-email"></i></h4>
+                                            <p>
+                                                portolex@support.com
+                                            </p>
+                                        </div>
+
+                                        <div class="col-12 col-md-12 col-lg-4">
+                                            <h4><i class="icon ion-android-map"></i></h4>
+                                            <p>
+                                                634 Crocker St, Los Angeles , USA
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action button -->
+                            <div class="btns-action anim-4 mt-3">
+                                <a class="btn btn-outline-white" href="#contact/message">
+                                    <span class="txt">Send Message</span>
+                                    <i class="icon fa fa-long-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+
+                    </div>
+                </div>
+            </div>
+            <!-- End of slide section wrapper -->
+        </div>
+        <!-- end of information slide -->
+
+        <!-- begin of message slide -->
+        <div class="slide" id="message" data-anchor="message">
+            <!-- Begin of slide section wrapper -->
+            <div class="section-wrapper center-vh dir-col">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <!-- content -->
+                        <div class="section-content anim text-center">
+                            <!-- title and description -->
+                            <div class="title-desc">
+                                <div>
+                                    <h2 class="display-4 display-title">Write Message</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <!-- content -->
+                        <div class="section-content anim text-left">
+                            <!-- title and description -->
+                            <div class="">
+                                <div class="form-container form-container-card">
+                                    <!-- Message form container -->
+                                    <form class="send_message_form message form" method="post"
+                                          action="#"
+                                          id="message_form">
+                                        <div class="form-group name">
+                                            <label for="mes-name">Name</label>
+                                            <input id="mes-name" name="name" type="text" placeholder=""
+                                                   class="form-control-line form-success-clean"
+                                                   required>
+                                        </div>
+                                        <div class="form-group email">
+                                            <label for="mes-email">Email</label>
+                                            <input id="mes-email" type="email" placeholder="" name="email"
+                                                   class="form-control-line form-success-clean"
+                                                   required>
+                                        </div>
+                                        <div class="form-group no-border">
+                                            <label for="mes-text">Message</label>
+                                            <textarea id="mes-text" name="message"
+                                                      class="form-control form-control-outline thick form-success-clean"
+                                                      required></textarea>
+
+                                            <div>
+                                                <p class="message-ok invisible form-text-feedback form-success-visible">
+                                                    Your message has been sent, thank you.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="btns">
+                                            <button id="submit-message"
+                                                    class="btn btn-outline-white btn-full email_b"
+                                                    name="submit_message">
+                                                <i class="icon ion-paper-airplane mr-2"></i>
+                                                <span class="txt">Send</span>
+                                                <span class="arrow-icon"></span>
+                                            </button>
+                                            <a class="btn btn-transparent btn-left-hover btn-border-none text-center"
+                                               href="#contact/information">
+                                                <span class="txt"><i class="fa fa-long-arrow-left mr-2"></i> Back To Information</span>
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of slide section wrapper -->
+        </div>
+        <!-- end of message slide -->
+
+    </div>
+    <!-- End of contact section -->
+</main>
+<!-- END OF page main content -->
+
+<!-- BEGIN OF page footer -->
+<footer id="site-footer" class="page-footer">
+    <!--&lt;!&ndash; Left content &ndash;&gt;-->
+    <!--<div class="footer-left">-->
+    <!--<p>PRODUCT BY-->
+    <!--<a href="http://lifeinsys.com">-->
+    <!--<span class="marked">LifeInSYS</span>-->
+    <!--</a>-->
+    <!--</p>-->
+    <!--</div>-->
+
+    <!-- Right content -->
+    <div class="footer-right">
+        <p class="note">Created by
+            <a href="https://themeforest.net/user/lifeinsys/portfolio">
+                <span class="marked"> LifeInSYS</span>
+            </a>
+        </p>
+        <ul class="social">
+            <li>
+                <a href="">
+                    <i class="icon fa fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon fa fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon fa fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<!-- END OF site footer -->
+
+<!-- scripts -->
+<!-- All Javascript plugins goes here -->
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+<!-- All vendor scripts -->
+<script src="js/vendor/scrolloverflow.min.js"></script>
+<script src="js/vendor/all.js"></script>
+<script src="js/particlejs/particles.min.js"></script>
+
+<!-- Form script -->
+<script src="js/form_script.js"></script>
+
+<!-- Javascript main files -->
+<script src="js/main.js"></script>
+
+
 </body>
 
 </html>
